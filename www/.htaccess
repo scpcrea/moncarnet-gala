@@ -1,0 +1,16 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteRule ^(.*)$ index.php [QSA,L]
+
+
+
+    RewriteCond %{HTTP_HOST}  ^lesessentiels-gala.fr
+    RewriteRule ^/?(.*)       http://www.moncarnet-gala.fr/$1 [L,R=301]
+    RewriteCond %{HTTP_HOST}  ^www.lesessentiels-gala.fr
+    RewriteRule ^/?(.*)       http://www.moncarnet-gala.fr/$1 [L,R=301]
+
+    Redirect 301 /articles/view/L-eveil-du-cheveux http://www.moncarnet-gala.fr/articles/view/L-eveil-du-cheveu
+
+</IfModule>

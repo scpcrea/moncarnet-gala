@@ -1,0 +1,11 @@
+<?php foreach($categories as $category):?>
+	<?= $category->name; ?><br/>
+
+	<?php if(!empty($category->ChildCategories)): ?>
+		test
+		<?php foreach($category->ChildCategories as $child): ?>
+			<?= - $child->name; ?>
+		<?php endforeach;?>	
+	<?php endif; ?>
+<?php endforeach; ?>
+

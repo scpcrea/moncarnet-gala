@@ -1,0 +1,6 @@
+<?= $category->parent_category->name; ?>
+<ul>
+	<?php foreach($category->parent_category->child_categories as $otherCategory): ?>
+	    <li> <?= $this->MonCarnet->linkToCategory($otherCategory);?></li>
+	<?php endforeach; ?>
+</ul>

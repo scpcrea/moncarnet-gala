@@ -1,0 +1,172 @@
+a.btn.social-link-btn {
+    background-color: #fff;
+    /* height: 55px; */
+}
+
+.linklist .btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 1em;
+}
+
+[class*=" icon-"], [class^=icon-] {
+    fill: currentColor;
+    width: 1em;
+    height: 1em;
+    overflow: hidden;
+    vertical-align: top;
+}
+
+.rounded-icon {
+    border-radius: 50%;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.btn {
+    display: inline-block;
+    font-size: .941rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    background-color: #c3c9cb;
+    border: 0;
+    padding: 12px 15px 9px;
+    text-transform: uppercase;
+    text-align: center;
+    white-space: nowrap;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background-color .2s;
+}
+
+.btn-share {
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    background-color: #c3c9cb;
+    line-height: 13px;
+    border: 0;
+    height: 25px;
+    padding: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color .2s;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.btn-facebook {
+    background-color: #435595;
+}
+
+.btn-share {
+    display: inline-block;
+    color: #fff;
+    font-weight: 700;
+    background-color: #c3c9cb;
+    line-height: 13px;
+    border: 0;
+    height: 25px;
+    padding: 6px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: background-color .2s;
+    vertical-align: top;
+}
+
+.btn-share{
+    vertical-align: middle;
+}
+
+.btn-youtube {
+    background-color: #ff0002;
+}
+.btn-pinterest {
+    background-color: #bd081c;
+}
+.btn-flickr {
+    background-color: #0062db;
+}
+.btn-viadeo {
+    background-color: #f49d23;
+}
+.btn-facebook {
+    background-color: #435595;
+}
+.btn-linkedin {
+    background-color: #007fb2;
+}
+.btn-twitter {
+    background-color: #1da1f2;
+}
+.btn-googleplus{
+    background-color: #dd4b39;
+}
+.btn-instagram {
+    background-color: #f52d84;
+}
+
+a.btn.social-link-btn:hover {
+    background-color: #fcc525;
+    color: #0e0e0e;
+    font-weight: 100;
+    /* height: 55px; */
+}
+
+a.btn.social-link-btn {
+    background-color: #fff;
+    /* height: 55px; */
+    text-transform: capitalize;
+    color: #000;
+    font-weight: 100;
+}
+
+.btn:focus, .btn:hover {
+    text-decoration: none;
+    background-color: hsla(195, 7%, 78%, .7);
+}
+
+.linklist .btn {
+    width: 100%;
+    padding: 20px;
+    font-size: 1em;
+}
+
+.btn.focus, .btn:focus, .btn:hover {
+    color: #333;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    color: #23527c;
+    text-decoration: none;
+}
+
+a:focus, a:hover {
+    text-decoration: underline;
+}
+
+a:hover {
+    outline-width: 0;
+}
+
+.btn-share [class*=icon-] {
+    width: 13px;
+    height: 13px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.share-buttons ul li{
+    display:inline-block;
+}
+.share-buttons ul {
+    display:inline-block;
+    margin:0;
+    padding:0;
+}
