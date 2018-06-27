@@ -27,7 +27,7 @@ use Cake\Event\Event;
 */
 class AppController extends Controller
 {
-    public $helpers = ['CkEditor.Ck', 'Media.Media'];
+    public $helpers = ['CkEditor.Ck', 'Media.Media', 'SocialShare.SocialShare'];
 
     public function initialize()
     {

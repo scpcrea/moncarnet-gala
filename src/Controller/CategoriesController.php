@@ -17,90 +17,96 @@ use Cake\ORM\TableRegistry;
 */
 class CategoriesController extends AppController
 {
-
-
   public function beforeFilter(Event $event)
   {
     parent::beforeFilter($event);
-    $this->Auth->allow('adresses');
   }
 
-  public function home()
+  /**
+  * View method
+  *
+  * @param string|null $id Category id.
+  * @return \Cake\Http\Response|void
+  * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+  */
+  public function adresses($slug = null)
   {
-    // $categories = $this->Categories->find()
-    //    ->order(['lft'=>'ASC']);
     $this->viewBuilder()->setLayout('default.gala');
-    
-    $categories = $this->Categories->find('all', [
-      'contain'       => ['']
-      ])->order(['Categories.lft'=>'ASC']);
 
-      $this->set(compact('categories'));
-      $this->set('serialize', ['categories']);
-    }
+    $category = $this->Categories->find('all', [
+      'contain' => [
+        'Articles',
+        'Articles.Categories',
+        'Articles.Media'
+      ]
+    ])
+    ->where([
+      'Categories.slug' => $slug
+    ])
+    ->order('rand()')
+    ->contain([
+      'Articles' => [
+        'strategy' => 'select',
+        'queryBuilder' => function ($q) {
+          return $q->where(['Articles.online >' => -1])
+          ->order('rand()');
+        }
+      ],
+      'Articles.Media' => [
+        'strategy' => 'select',
+        'queryBuilder' => function ($q) {
+          return $q->order(['position' => 'ASC']);
+        }
+      ]
+    ])
+    ->first();
 
-    public function sommaire($id = null)
-    {
-      // $categories = $this->Categories->find()
-      //    ->order(['lft'=>'ASC']);
-      $this->viewBuilder()->setLayout('default.gala');
+    $this->set('category', $category);
+    $this->set('_serialize', ['category']);
 
-      $parent = $this->Categories->get($id);
+  }
 
-      $categories = $this->Categories->find('all', [
-        'contain'       => ['ParentCategories', 'ChildCategories']])
-        ->order(['Categories.lft'=>'ASC'])
-        ->where(['Categories.parent_id =' => $id]);
+  /**
+  * View method
+  *
+  * @param string|null $id Category id.
+  * @return \Cake\Http\Response|void
+  * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+  */
+  public function view($id = null, $slug = null)
+  {
+    $this->viewBuilder()->setLayout('default.gala');
 
-        $this->set(compact('categories'));
-        $this->set('serialize', ['categories']);
+    $category = $this->Categories->find('all', [
+      'contain' => [
+        'Articles',
+        'Articles.Categories',
+        'Articles.Media'
+      ]
+    ])
+    ->where([
+      'Categories.slug' => $slug
+    ])
+    ->order('rand()')
+    ->contain([
+      'Articles' => [
+        'strategy' => 'select',
+        'queryBuilder' => function ($q) {
+          return $q->where(['Articles.online >' => -1])
+          ->order('rand()');
+        }
+      ],
+      'Articles.Media' => [
+        'strategy' => 'select',
+        'queryBuilder' => function ($q) {
+          return $q->order(['position' => 'ASC']);
+        }
+      ]
+    ])
+    ->first();
 
-        $this->set(compact('parent'));
-        $this->set('serialize', ['parent']);
-      }
+    $this->set('category', $category);
+    $this->set('_serialize', ['category']);
+  }
 
-      /**
-      * View method
-      *
-      * @param string|null $id Category id.
-      * @return \Cake\Http\Response|void
-      * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
-      */
-      public function adresses($slug = null)
-      {
-        $this->viewBuilder()->setLayout('default.gala');
-
-        $category = $this->Categories->find('all', [
-          'contain' => [
-            'Articles',
-            'Articles.Categories',
-            'Articles.Media'
-          ]
-        ])
-        ->where([
-          'Categories.slug' => $slug
-        ])
-        ->order('rand()')
-        ->contain([
-          'Articles' => [
-            'strategy' => 'select',
-            'queryBuilder' => function ($q) {
-              return $q->where(['Articles.online >' => -1])
-              ->order('rand()');
-            }
-          ],
-          'Articles.Media' => [
-            'strategy' => 'select',
-            'queryBuilder' => function ($q) {
-              return $q->order(['position' => 'ASC']);
-            }
-          ]
-        ])
-        ->first();
-
-        $this->set('category', $category);
-        $this->set('_serialize', ['category']);
-
-      }
-
-    }
+}

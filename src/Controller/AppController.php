@@ -42,35 +42,7 @@ class AppController extends Controller
     */
     public function initialize()
     {
-        $this->loadComponent('Flash');
-        $this->loadComponent('Auth', [
-            'authorize' => ['Controller'], // Ajout de cette ligne
-            'loginRedirect' => [
-                'controller' => 'Articles',
-                'action' => 'index'
-            ],
-            'logoutRedirect' => [
-                'controller' => 'Pages',
-                'action' => 'display',
-                'home'
-            ]
-        ]);
-    }
-
-    public function isAuthorized($user)
-    {
-        // Admin peuvent accéder à chaque action
-        if (isset($user['role']) && $user['role'] === 'admin') {
-            return true;
-        }
-
-        // Par défaut refuser
-        return false;
-    }
-
-    public function beforeFilter(Event $event)
-    {
-        $this->Auth->allow('adresses');
+      $this->viewBuilder()->setLayout('default.gala');
     }
 
     /**
@@ -91,9 +63,4 @@ class AppController extends Controller
             $this->set('_serialize', true);
         }
     }
-
-    public static function canUploadMedias($model, $id){
-        return true;
-    }
-
 }
