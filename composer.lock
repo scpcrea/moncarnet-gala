@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b6d0dc95d9f341831e30429ed1131e5",
+    "content-hash": "3ec7580a4b901b98dee8589bacd983da",
     "packages": [
         {
             "name": "aura/intl",
@@ -289,87 +289,26 @@
             "time": "2017-03-21T13:48:47+00:00"
         },
         {
-            "name": "josegonzalez/dotenv",
-            "version": "2.1.0",
+            "name": "drmonkeyninja/cakephp-social-share",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
-                "url": "https://github.com/josegonzalez/php-dotenv.git",
-                "reference": "ff3461f2960737f54054dff4fef3482a2bb9682b"
+                "url": "https://github.com/drmonkeyninja/cakephp-social-share.git",
+                "reference": "654f3caaf8c008cb7d566152d84f86214afc7977"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/josegonzalez/php-dotenv/zipball/ff3461f2960737f54054dff4fef3482a2bb9682b",
-                "reference": "ff3461f2960737f54054dff4fef3482a2bb9682b",
+                "url": "https://api.github.com/repos/drmonkeyninja/cakephp-social-share/zipball/654f3caaf8c008cb7d566152d84f86214afc7977",
+                "reference": "654f3caaf8c008cb7d566152d84f86214afc7977",
                 "shasum": ""
             },
             "require": {
-                "m1/env": "2.*",
-                "php": ">=5.3.0"
+                "cakephp/cakephp": "~3.0"
             },
-            "require-dev": {
-                "satooshi/php-coveralls": "1.*",
-                "squizlabs/php_codesniffer": "2.*"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "josegonzalez\\Dotenv": [
-                        "src",
-                        "tests"
-                    ]
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jose Diaz-Gonzalez",
-                    "email": "dotenv@josegonzalez.com",
-                    "homepage": "http://josediazgonzalez.com",
-                    "role": "Maintainer"
-                }
-            ],
-            "description": "dotenv file parsing for PHP",
-            "homepage": "https://github.com/josegonzalez/php-dotenv",
-            "keywords": [
-                "configuration",
-                "dotenv",
-                "php"
-            ],
-            "time": "2017-01-03T01:04:05+00:00"
-        },
-        {
-            "name": "m1/env",
-            "version": "2.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/m1/Env.git",
-                "reference": "d87eddd031f2aa5450fa04bb1325de8a489b3cd0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/m1/Env/zipball/d87eddd031f2aa5450fa04bb1325de8a489b3cd0",
-                "reference": "d87eddd031f2aa5450fa04bb1325de8a489b3cd0",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.0"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1",
-                "squizlabs/php_codesniffer": "^2.3"
-            },
-            "suggest": {
-                "josegonzalez/dotenv": "For loading of .env",
-                "m1/vars": "For loading of configs"
-            },
-            "type": "library",
+            "type": "cakephp-plugin",
             "autoload": {
                 "psr-4": {
-                    "M1\\Env\\": "src"
+                    "SocialShare\\": "src"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -378,25 +317,21 @@
             ],
             "authors": [
                 {
-                    "name": "Miles Croxford",
-                    "email": "hello@milescroxford.com",
-                    "homepage": "http://milescroxford.com",
-                    "role": "Developer"
+                    "name": "Andy Carter",
+                    "role": "Author"
+                },
+                {
+                    "name": "Mark Scherer",
+                    "role": "Contributor"
                 }
             ],
-            "description": "Env is a lightweight library bringing .env file parser compatibility to PHP. In short - it enables you to read .env files with PHP.",
-            "homepage": "https://github.com/m1/Env",
+            "description": "CakePHP helper for creating social share/bookmark links",
+            "homepage": "https://github.com/drmonkeyninja/cakephp-social-share",
             "keywords": [
-                ".env",
-                "config",
-                "dotenv",
-                "env",
-                "loader",
-                "m1",
-                "parser",
-                "support"
+                "cakephp",
+                "helper"
             ],
-            "time": "2016-10-06T19:31:28+00:00"
+            "time": "2016-07-12T13:59:17+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
