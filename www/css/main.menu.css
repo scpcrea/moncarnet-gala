@@ -1398,7 +1398,7 @@ blockquote em{font-size:11px;font-weight:600;margin-left:20px;}
 .headline h3,
 .headline h1 a,
 .headline h2,
-.headline h4{margin:0 0 -2px 0;padding-bottom:5px;display:inline-block;border-bottom:2px solid #347ab7;text-transform:uppercase;color:#555;}
+.headline h4{margin:0 0 -2px 0;padding-bottom:5px;display:inline-block;border-bottom: 0;text-transform:uppercase;color:#555;}
 .heading{padding-left:100px;}
 .heading .block-name{color:#999;text-transform:uppercase;font-size:12px;font-weight:bold;}
 .heading p{color:#999;font-size:16px;}
@@ -1687,6 +1687,7 @@ h2.article-subtitle{
   font-size: 50px;
   font-weight: 300;
   text-align: center;
+  width: 100%;
   /* line-height: 34px; */
   margin: 0px;
   margin-top: 0px;
@@ -2087,7 +2088,8 @@ h2.articles-list-subtitle{
 }
 
 .container-fluid.carrousel.carrousel-article {
-  padding-top: 114px;
+  padding-top: 0;
+  margin-top: 50px;
 }
 
 .container-fluid.home-categories {background: #ffffff;text-align: center;padding: 40px 103px 0 103px;}

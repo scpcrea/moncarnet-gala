@@ -2532,4 +2532,14 @@ span.actu-title {
 
 h1.share-title {
     font-size: 18px;
+  }
+
+  .side-images img {
+      width: 100%;
+      margin-bottom: 15px;
+  }
+
+p.intro {
+    font-weight: 900;
+    font-size:18px;
 }

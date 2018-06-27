@@ -1,13 +1,11 @@
 </div><!-- /.navbar-collapse -->
       <?= $this->element('search-bar', ['is_advanced' => false]); ?>
     </div><!-- /.container-fluid -->
-    
+
 
 <?php $this->start('title');?>
     <?= $category->name; ?>
 <?php $this->end(); ?>
-
-
 
 <?php $this->start('breadcrumb');?>
     <strong style='font-weight: 500;'><?= $category->name; ?></strong>

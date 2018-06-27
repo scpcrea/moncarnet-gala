@@ -23,7 +23,6 @@ $cakeDescription = "Mon carnet d'adresses Gala";
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'UA-54695597-1');
   </script>
 
@@ -56,30 +55,25 @@ $cakeDescription = "Mon carnet d'adresses Gala";
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDqQzcZTEqQNQx0L3824xkRDcwF_5d3xYQ&callback=initMap"
   async defer></script>
   <?= $this->Html->css('scp/social_links') ?>
-  <?= $this->fetch('meta') ?>
   <?= $this->fetch('css') ?>
-  <?= $this->fetch('css2') ?>
   <?= $this->fetch('script') ?>
-  <?= $this->fetch('script2') ?>
+  <?= $this->fetch('meta') ?>
 </head>
 
-<body class="header-fixed">
-    <?= $this->element('svg/vectos') ?>
-  <?= $this->element('menu'); ?>
-  <?php if($this->request->action != 'display' && $this->request->action != 'home2' && $this->request->action != 'recherche'): ?>
-    <?= $this->element('menu-search'); ?>
-  <?php endif; ?>
-  <?= $this->fetch('carrousel')?>
-  <?= $this->fetch('bandeau') ?>
-  <?= $this->fetch('coupdecoeur') ?>
-  <?= $this->Flash->render() ?>
+<body>
+  <?= $this->element('svg/vectos') ?>
+  <?= $this->element('header'); ?>
+  <?= $this->fetch('carrousel'); ?>
 
-  <?= $this->fetch('content') ?>
-  <footer style="background-color: #000;"></footer>
+  <div class="content">
+    <div class="container">
+      <?= $this->fetch('content') ?>
+    </div>
+  </div>
+  <div class="more-content">
+  </div>
 
-  <?= $this->Html->script("https://code.jquery.com/jquery-3.2.1.min.js")?>
-  <?= $this->Html->script("https://code.jquery.com/jquery-migrate-3.0.0.js")?>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <?= $this->element('default-scripts'); ?>
   <?= $this->fetch('end-script') ?>
 </body>
 </html>
