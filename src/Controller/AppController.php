@@ -42,8 +42,9 @@ class AppController extends Controller
     */
     public function initialize()
     {
-      $this->viewBuilder()->setLayout('default.gala');
+      $this->viewBuilder()->setLayout('default.ssgala');
     }
+
 
     /**
     * Before render callback.
