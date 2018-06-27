@@ -2487,7 +2487,6 @@ span.signature {
 
 .side-title {
     margin-top: -33px;
-    /* margin-left: 64px; */
     margin-left: auto;
     margin-right: auto;
     background: white;
@@ -2495,14 +2494,12 @@ span.signature {
     padding: 8px;
     font-size: 16px;
     text-transform: uppercase;
-    /* color: white; */
 }
 
 a.btn.btn-action {
     width: 100%;
     padding: 12px;
     font-size: 14px;
-    /* background: white; */
     color: white;
     font-family: "Montserrat";
     font-weight: 500;
